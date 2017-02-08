@@ -5,12 +5,12 @@ import { browserHistory } from 'react-router'
 import ReduxPromise from 'redux-promise'
 
 import Root from './root'
-import rootReducer from '../reducers/reducers'
+import rootReducer from './reducers/reducers'
 
-const store = createStore(rootReducer, applyMiddleware(ReduxPromise))
+const store   = createStore(rootReducer, applyMiddleware(ReduxPromise))
 const history = browserHistory
 
 render(
-  <Root store={store} history={history}/>, 
-  document.getElementById('app')
+    <Root store={store} history={history}/>,
+    document.getElementById('app')
 )
